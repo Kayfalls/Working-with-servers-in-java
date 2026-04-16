@@ -1,3 +1,4 @@
+import org.example.MyClient;
 import org.example.MyServer;
 
 import java.util.Scanner;
@@ -14,10 +15,10 @@ void main() {
     *  */
     try (var scanner = new Scanner(System.in)) {
         System.out.println("Is this a server? (y/n)");
-        if (scanner.nextline().equalsIgnoreCase("y")) {
+        if (scanner.nextLine().equalsIgnoreCase("y")) {
             new MyServer().start(PORT_NUMBER);
         } else {
-            System.out.println("Client TODO");
+            new MyClient().start(PORT_NUMBER, scanner);
         }
     }
 }
