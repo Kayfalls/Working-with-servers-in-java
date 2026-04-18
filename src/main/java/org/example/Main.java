@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 final int PORT_NUMBER = 12345;
 
-void main() {
+void main() throws IOException {
     /*
     * First the code creates a scanner over system.in using try with resources meaning that
         at the end of the try block we are going to close the scanner.
